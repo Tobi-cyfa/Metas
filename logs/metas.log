@@ -1,0 +1,3 @@
+2023-06-20 17:48:53,366 - INFO - 6707 - Storing the new configuration
+2023-06-20 17:48:53,366 - INFO - 6707 - Scheduling network(s): 192.168.8.0/24
+2023-06-20 17:52:12,503 - INFO - 6707 - Discovered Asset: 192.168.8.101

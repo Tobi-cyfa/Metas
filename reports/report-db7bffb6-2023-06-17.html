@@ -1,0 +1,970 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+      body {
+          background-color: #293142;
+          color: #333;
+          margin: 0 auto;
+          width: 960px;
+          font-family:Verdana, Geneva, Tahoma, sans-serif
+
+      }
+      h1, h2, h3, h4 {
+          color:white;
+          font-family: 'Recursive', sans-serif;
+      }
+      .headerdiv{
+
+          background-size:cover;
+          display:flex;
+          flex-flow:row nowrap;
+          justify-content:center;
+      }
+      .headerdiv h1{
+          padding:20px 0 10px 20px;
+          color:white;
+          font-family: 'Recursive', sans-serif;
+      }
+
+      .details{
+          font-family: monospace;
+
+      }
+      .overviewDiv{
+          display:flex;
+          flex-flow:row nowrap;
+          margin-top:20px;
+      }
+      #summary{ 
+          width:100%;
+      }
+      #overview {
+          width:95%;
+          border-top-left-radius: 2em;
+          border-bottom-right-radius: 2em;
+          overflow: hidden;
+      
+      }
+      #overview th {
+          background-color:#13869A;
+          padding: 5px 12px;
+          color:white;
+      }
+      #overview td {
+          background-color:lightgrey;
+          padding:5px 12px;
+          font-family:monospace;
+      }
+      #overview td:hover{
+          background-color:white;
+      }
+      
+      #summary {
+          border-top-left-radius: 2em;
+          border-bottom-right-radius: 2em;
+          overflow: hidden;
+      }
+
+      #summary th {
+          background-color:#13869A;
+          padding: 5px 12px;
+          color:white;
+      }
+
+      #summary td {
+          background-color:darkgrey;
+          text-align: center;
+          padding: 4px 8px;
+          font-family:monospace;
+          font-size:15px;
+      }
+      #summary tr:nth-child(even) td{
+          background-color:lightgrey;
+      }
+      #summary tr:nth-child(even) td:hover{
+          background-color:white;
+      }
+      #summary td:hover {
+          background-color:white;
+      }
+
+      #details{
+          border-top-left-radius: 2em;
+          overflow: hidden;
+      }
+
+      #details th {
+          padding: 5px 12px;
+      }
+      #details tr:nth-child(even) td{
+          background-color:darkgrey;
+      }
+      #details tr:nth-child(even) td:hover{
+          background-color:white;
+      }
+
+      #details .sev_4 {
+          background-color:#ff6666;
+      }
+      #details .sev_3 {
+          background-color:#ff9b8b;
+      }
+      #details .sev_2 {
+          background-color:#ffffcc;
+      }
+      #details .sev_1 {
+          background-color:#88eeaa;
+      }
+      #details .sev_0 {
+          background-color:lightblue;
+      }
+
+      #details td {
+          background-color: lightgrey;
+          padding: 5px 12px;
+          font-family:monospace;
+          font-size:15px;
+      }
+      
+
+      #details td:hover{
+          background-color:white;
+      }
+
+
+      footer p{
+          font-size:12px;
+          color:white;
+      }
+      
+  </style>
+</head>
+
+<body>
+<div class='headerdiv'>
+  <h1>METAS <span style="font-size:10px">2.5.5</span></h1>
+</div>
+<h2>Overview</h2>
+<div class='overviewDiv'>
+
+  <div style='width:50%'>
+      <table id="overview">
+          <tr>
+              <th>TIMESTAMP</th>
+              <td colspan="5">2023-06-17 14:32:29</td>
+          </tr>
+          <tr>
+            <th>ID</th>
+            <td colspan="5">052F70AC</td>
+        </tr>
+          <tr>
+            <th>NAME</th>
+            <td colspan="5">Default</td>
+        </tr>
+          <tr>
+              <th>ENGINEER</th>
+              <td colspan="5">John Doe</td>
+          </tr>
+          <tr>
+            <th>SOURCE IP</th>
+            <td colspan="5">127.0.0.1</td>
+        </tr>
+      </table>
+  </div>
+
+  <div style='width:50%;'>
+  
+
+  <table id='summary'>
+      <tr>
+          <th>CRITICAL</th>
+          <td>2</td>
+      </tr>
+      <tr>
+          <th>HIGH</th>
+          <td>10</td>
+      </tr>
+      <tr>
+          <th>MEDIUM</th>
+          <td>7</td>
+      </tr>
+      <tr>
+          <th>LOW</th>
+          <td>4</td>
+      </tr>
+      <tr>
+          <th>INFO</th>
+          <td>1</td>
+      </tr>
+
+  </table>
+  </div>
+
+
+</div>
+
+<h2>Vulnerabilities</h2>
+<table id="details">
+  
+  
+  
+  <tr>
+      <th class='sev_4'>TITLE</th>
+      <th class='sev_4'>This rule checks if FTP Server allows Anonymous Access</th>
+  </tr>
+  <tr>
+      <th class='sev_4'>FINDINGS</th>
+      <td>FTP Anonymous Access Allowed</td>
+  </tr>
+
+  <tr>
+      <th class='sev_4'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_4'>PORT</th>
+    <td>21</td>
+</tr>
+  <tr>
+      <th class='sev_4'>DETAILS</th>
+      <td class='details'>FTP with Anonymous Access Enabled</td>
+  </tr>
+  <tr>
+    <th class='sev_4'>RULE_ID</th>
+    <td>VLN_242C</td>
+</tr>
+  <tr>
+      <th class='sev_4'>MITIGATION</th>
+      <td>FTP allows anonymous users access. Disable Anonymous FTP access if this is not a business requirement.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_4'>TITLE</th>
+      <th class='sev_4'>This rule checks for Open Directories via Directory Indexing</th>
+  </tr>
+  <tr>
+      <th class='sev_4'>FINDINGS</th>
+      <td>Remote Server has Directory Indexing Enabled</td>
+  </tr>
+
+  <tr>
+      <th class='sev_4'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_4'>PORT</th>
+    <td>80</td>
+</tr>
+  <tr>
+      <th class='sev_4'>DETAILS</th>
+      <td class='details'>Identified an Open Directory at http://192.168.116.134/test/</td>
+  </tr>
+  <tr>
+    <th class='sev_4'>RULE_ID</th>
+    <td>VLN_Z013</td>
+</tr>
+  <tr>
+      <th class='sev_4'>MITIGATION</th>
+      <td>Disable Directory Indexing on the server. Directory Indexing can allow access to files on the server to untrusted sources.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_3'>TITLE</th>
+      <th class='sev_3'>This rule checks for open Remote Management Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_3'>FINDINGS</th>
+      <td>Remote Server Exposes Administration Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_3'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_3'>PORT</th>
+    <td>23</td>
+</tr>
+  <tr>
+      <th class='sev_3'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 23 (Telnet)</td>
+  </tr>
+  <tr>
+    <th class='sev_3'>RULE_ID</th>
+    <td>SVC_6509</td>
+</tr>
+  <tr>
+      <th class='sev_3'>MITIGATION</th>
+      <td>Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_3'>TITLE</th>
+      <th class='sev_3'>This rule checks for open FTP Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_3'>FINDINGS</th>
+      <td>Remote Server Exposes FTP Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_3'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_3'>PORT</th>
+    <td>21</td>
+</tr>
+  <tr>
+      <th class='sev_3'>DETAILS</th>
+      <td class='details'>Server is listening on remote port:21 (FTP)</td>
+  </tr>
+  <tr>
+    <th class='sev_3'>RULE_ID</th>
+    <td>SVC_C74A</td>
+</tr>
+  <tr>
+      <th class='sev_3'>MITIGATION</th>
+      <td>Ensure at the bare minimum FTP is over SSL, and only allow trusted clients to connect to it over the network.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_3'>TITLE</th>
+      <th class='sev_3'>This rule checks for open Remote Management Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_3'>FINDINGS</th>
+      <td>Remote Server Exposes Administration Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_3'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_3'>PORT</th>
+    <td>139</td>
+</tr>
+  <tr>
+      <th class='sev_3'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 139 (NetBIOS)</td>
+  </tr>
+  <tr>
+    <th class='sev_3'>RULE_ID</th>
+    <td>SVC_6509</td>
+</tr>
+  <tr>
+      <th class='sev_3'>MITIGATION</th>
+      <td>Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_3'>TITLE</th>
+      <th class='sev_3'>This rule checks if OpenSSH allows passwords as an accepted authentication mechanism</th>
+  </tr>
+  <tr>
+      <th class='sev_3'>FINDINGS</th>
+      <td>Remote Server Supports SSH Passwords</td>
+  </tr>
+
+  <tr>
+      <th class='sev_3'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_3'>PORT</th>
+    <td>22</td>
+</tr>
+  <tr>
+      <th class='sev_3'>DETAILS</th>
+      <td class='details'>Server accepts passwords as an authentication option</td>
+  </tr>
+  <tr>
+    <th class='sev_3'>RULE_ID</th>
+    <td>CFG_FOQW</td>
+</tr>
+  <tr>
+      <th class='sev_3'>MITIGATION</th>
+      <td>OpenSSH allows password authentication, this is considered bad security practice. 
+SSH Key based authentication should be enabled on the server, and passwords should be disabled.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_3'>TITLE</th>
+      <th class='sev_3'>This rule checks for open Service Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_3'>FINDINGS</th>
+      <td>Exposed Service Port</td>
+  </tr>
+
+  <tr>
+      <th class='sev_3'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_3'>PORT</th>
+    <td>111</td>
+</tr>
+  <tr>
+      <th class='sev_3'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 111 (NFS)</td>
+  </tr>
+  <tr>
+    <th class='sev_3'>RULE_ID</th>
+    <td>SVC_F88A</td>
+</tr>
+  <tr>
+      <th class='sev_3'>MITIGATION</th>
+      <td>Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_3'>TITLE</th>
+      <th class='sev_3'>This rule checks for open Database Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_3'>FINDINGS</th>
+      <td>Remote Server Exposes Database Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_3'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_3'>PORT</th>
+    <td>5432</td>
+</tr>
+  <tr>
+      <th class='sev_3'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 5432 (PostgreSQL)</td>
+  </tr>
+  <tr>
+    <th class='sev_3'>RULE_ID</th>
+    <td>SVC_0C15</td>
+</tr>
+  <tr>
+      <th class='sev_3'>MITIGATION</th>
+      <td>Bind all possible database interfaces to localhost. 
+If the database requires remote connections, allow only trusted source ip addresses.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_3'>TITLE</th>
+      <th class='sev_3'>This rule checks for open Database Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_3'>FINDINGS</th>
+      <td>Remote Server Exposes Database Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_3'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_3'>PORT</th>
+    <td>3306</td>
+</tr>
+  <tr>
+      <th class='sev_3'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 3306 (MySQL)</td>
+  </tr>
+  <tr>
+    <th class='sev_3'>RULE_ID</th>
+    <td>SVC_0C15</td>
+</tr>
+  <tr>
+      <th class='sev_3'>MITIGATION</th>
+      <td>Bind all possible database interfaces to localhost. 
+If the database requires remote connections, allow only trusted source ip addresses.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_3'>TITLE</th>
+      <th class='sev_3'>This rule checks for open SMB Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_3'>FINDINGS</th>
+      <td>Remote Server Exposes SMB Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_3'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_3'>PORT</th>
+    <td>445</td>
+</tr>
+  <tr>
+      <th class='sev_3'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 445 (SMB)</td>
+  </tr>
+  <tr>
+    <th class='sev_3'>RULE_ID</th>
+    <td>SVC_Z115</td>
+</tr>
+  <tr>
+      <th class='sev_3'>MITIGATION</th>
+      <td>Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_3'>TITLE</th>
+      <th class='sev_3'>This rule checks for open Remote Management Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_3'>FINDINGS</th>
+      <td>Remote Server Exposes Administration Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_3'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_3'>PORT</th>
+    <td>22</td>
+</tr>
+  <tr>
+      <th class='sev_3'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 22 (SSH)</td>
+  </tr>
+  <tr>
+    <th class='sev_3'>RULE_ID</th>
+    <td>SVC_6509</td>
+</tr>
+  <tr>
+      <th class='sev_3'>MITIGATION</th>
+      <td>Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_3'>TITLE</th>
+      <th class='sev_3'>This rule checks for open Remote Management Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_3'>FINDINGS</th>
+      <td>Remote Server Exposes Administration Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_3'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_3'>PORT</th>
+    <td>5900</td>
+</tr>
+  <tr>
+      <th class='sev_3'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 5900 (VNC)</td>
+  </tr>
+  <tr>
+    <th class='sev_3'>RULE_ID</th>
+    <td>SVC_6509</td>
+</tr>
+  <tr>
+      <th class='sev_3'>MITIGATION</th>
+      <td>Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_2'>TITLE</th>
+      <th class='sev_2'>This rule checks for open Rare Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_2'>FINDINGS</th>
+      <td>Remote Server Exposes Rare Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_2'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_2'>PORT</th>
+    <td>6000</td>
+</tr>
+  <tr>
+      <th class='sev_2'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 6000 (x11)</td>
+  </tr>
+  <tr>
+    <th class='sev_2'>RULE_ID</th>
+    <td>SVC_0C1Z</td>
+</tr>
+  <tr>
+      <th class='sev_2'>MITIGATION</th>
+      <td>Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_2'>TITLE</th>
+      <th class='sev_2'>This rule checks for misconfigurations in PHP</th>
+  </tr>
+  <tr>
+      <th class='sev_2'>FINDINGS</th>
+      <td>PHP Information Leakage</td>
+  </tr>
+
+  <tr>
+      <th class='sev_2'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_2'>PORT</th>
+    <td>80</td>
+</tr>
+  <tr>
+      <th class='sev_2'>DETAILS</th>
+      <td class='details'>PHP Misconfiguration - Default PHP environment page at http://192.168.116.134:80/phpinfo.php</td>
+  </tr>
+  <tr>
+    <th class='sev_2'>RULE_ID</th>
+    <td>CFG_BS3R</td>
+</tr>
+  <tr>
+      <th class='sev_2'>MITIGATION</th>
+      <td>The Remote Server's PHP is leaking out environment information, which may under certain situations reveal sensitive data such as environment variables, modules installed, etc.
+Disable PHP info by either adding
+`disable_functions = phpinfo`
+in php.ini file 
+OR
+`php_value disable_functions phpinfo`
+in .htaccess file.
+</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_2'>TITLE</th>
+      <th class='sev_2'>This rule checks for open Rare Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_2'>FINDINGS</th>
+      <td>Remote Server Exposes Rare Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_2'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_2'>PORT</th>
+    <td>2049</td>
+</tr>
+  <tr>
+      <th class='sev_2'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 2049 (nfs)</td>
+  </tr>
+  <tr>
+    <th class='sev_2'>RULE_ID</th>
+    <td>SVC_0C1Z</td>
+</tr>
+  <tr>
+      <th class='sev_2'>MITIGATION</th>
+      <td>Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_2'>TITLE</th>
+      <th class='sev_2'>This rule checks for open Rare Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_2'>FINDINGS</th>
+      <td>Remote Server Exposes Rare Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_2'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_2'>PORT</th>
+    <td>513</td>
+</tr>
+  <tr>
+      <th class='sev_2'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 513 (login)</td>
+  </tr>
+  <tr>
+    <th class='sev_2'>RULE_ID</th>
+    <td>SVC_0C1Z</td>
+</tr>
+  <tr>
+      <th class='sev_2'>MITIGATION</th>
+      <td>Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_2'>TITLE</th>
+      <th class='sev_2'>This rule checks for open Rare Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_2'>FINDINGS</th>
+      <td>Remote Server Exposes Rare Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_2'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_2'>PORT</th>
+    <td>514</td>
+</tr>
+  <tr>
+      <th class='sev_2'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 514 (shell)</td>
+  </tr>
+  <tr>
+    <th class='sev_2'>RULE_ID</th>
+    <td>SVC_0C1Z</td>
+</tr>
+  <tr>
+      <th class='sev_2'>MITIGATION</th>
+      <td>Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_2'>TITLE</th>
+      <th class='sev_2'>This rule checks for open Rare Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_2'>FINDINGS</th>
+      <td>Remote Server Exposes Rare Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_2'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_2'>PORT</th>
+    <td>8009</td>
+</tr>
+  <tr>
+      <th class='sev_2'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 8009 (Unknown)</td>
+  </tr>
+  <tr>
+    <th class='sev_2'>RULE_ID</th>
+    <td>SVC_0C1Z</td>
+</tr>
+  <tr>
+      <th class='sev_2'>MITIGATION</th>
+      <td>Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_2'>TITLE</th>
+      <th class='sev_2'>This rule checks for open Rare Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_2'>FINDINGS</th>
+      <td>Remote Server Exposes Rare Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_2'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_2'>PORT</th>
+    <td>2121</td>
+</tr>
+  <tr>
+      <th class='sev_2'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 2121 (iprop)</td>
+  </tr>
+  <tr>
+    <th class='sev_2'>RULE_ID</th>
+    <td>SVC_0C1Z</td>
+</tr>
+  <tr>
+      <th class='sev_2'>MITIGATION</th>
+      <td>Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_1'>TITLE</th>
+      <th class='sev_1'>This rule checks for open HTTP Ports</th>
+  </tr>
+  <tr>
+      <th class='sev_1'>FINDINGS</th>
+      <td>Remote Server Exposes HTTP Port(s)</td>
+  </tr>
+
+  <tr>
+      <th class='sev_1'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_1'>PORT</th>
+    <td>80</td>
+</tr>
+  <tr>
+      <th class='sev_1'>DETAILS</th>
+      <td class='details'>Server is listening on remote port: 80 (HTTP)</td>
+  </tr>
+  <tr>
+    <th class='sev_1'>RULE_ID</th>
+    <td>SVC_ZGZA</td>
+</tr>
+  <tr>
+      <th class='sev_1'>MITIGATION</th>
+      <td>Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_1'>TITLE</th>
+      <th class='sev_1'>This rule checks for the exposure of Web Panels</th>
+  </tr>
+  <tr>
+      <th class='sev_1'>FINDINGS</th>
+      <td>Identified a Known Web Panel</td>
+  </tr>
+
+  <tr>
+      <th class='sev_1'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_1'>PORT</th>
+    <td>80</td>
+</tr>
+  <tr>
+      <th class='sev_1'>DETAILS</th>
+      <td class='details'>Login Page Exposed at http://192.168.116.134:80/</td>
+  </tr>
+  <tr>
+    <th class='sev_1'>RULE_ID</th>
+    <td>DSC_A4F1</td>
+</tr>
+  <tr>
+      <th class='sev_1'>MITIGATION</th>
+      <td>Identify whether the application in question is supposed to be exposed to the network.</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_1'>TITLE</th>
+      <th class='sev_1'>This rule checks for VNC services on obfuscated ports</th>
+  </tr>
+  <tr>
+      <th class='sev_1'>FINDINGS</th>
+      <td>Remote Server Obfuscates VNC ports</td>
+  </tr>
+
+  <tr>
+      <th class='sev_1'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_1'>PORT</th>
+    <td>6000</td>
+</tr>
+  <tr>
+      <th class='sev_1'>DETAILS</th>
+      <td class='details'>Server is hiding VNC behind remote port: 6000</td>
+  </tr>
+  <tr>
+    <th class='sev_1'>RULE_ID</th>
+    <td>SVC_0391</td>
+</tr>
+  <tr>
+      <th class='sev_1'>MITIGATION</th>
+      <td>VNC Running on non-standard ports is easy for attackers to find.
+While it doesn't do harm changing the standard port from (default) 5900-5904, check whether VNC can be disabled, or allow acces only from trusted IP addresses.
+</td>
+  </tr>
+  
+  
+  
+  <tr>
+      <th class='sev_1'>TITLE</th>
+      <th class='sev_1'>This rule checks for the exposure of Web Panels</th>
+  </tr>
+  <tr>
+      <th class='sev_1'>FINDINGS</th>
+      <td>Identified a Known Web Panel</td>
+  </tr>
+
+  <tr>
+      <th class='sev_1'>ADDRESS</th>
+      <td>192.168.116.134 </td>
+  </tr>
+  <tr>
+    <th class='sev_1'>PORT</th>
+    <td>80</td>
+</tr>
+  <tr>
+      <th class='sev_1'>DETAILS</th>
+      <td class='details'>MySQL Administration Exposed at http://192.168.116.134:80/</td>
+  </tr>
+  <tr>
+    <th class='sev_1'>RULE_ID</th>
+    <td>DSC_A4F1</td>
+</tr>
+  <tr>
+      <th class='sev_1'>MITIGATION</th>
+      <td>Identify whether the application in question is supposed to be exposed to the network.</td>
+  </tr>
+  
+  
+  
+  
+  
+
+
+</table>
+
+<footer>
+  <center><p>METAS</p></center>
+</footer>
+</body>

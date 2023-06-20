@@ -1,0 +1,254 @@
+ip:192.168.116.134
+port:21
+domain:None
+rule_id:VLN_242C
+rule_sev:4
+rule_desc:This rule checks if FTP Server allows Anonymous Access
+rule_confirm:FTP Anonymous Access Allowed
+rule_details:FTP with Anonymous Access Enabled
+rule_mitigation:FTP allows anonymous users access. Disable Anonymous FTP access if this is not a business requirement.
+
+ip:192.168.116.134
+port:6000
+domain:None
+rule_id:SVC_0C1Z
+rule_sev:2
+rule_desc:This rule checks for open Rare Ports
+rule_confirm:Remote Server Exposes Rare Port(s)
+rule_details:Server is listening on remote port: 6000 (x11)
+rule_mitigation:Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.
+
+ip:192.168.116.134
+port:80
+domain:None
+rule_id:SVC_ZGZA
+rule_sev:1
+rule_desc:This rule checks for open HTTP Ports
+rule_confirm:Remote Server Exposes HTTP Port(s)
+rule_details:Server is listening on remote port: 80 (HTTP)
+rule_mitigation:Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.
+
+ip:192.168.116.134
+port:23
+domain:None
+rule_id:SVC_6509
+rule_sev:3
+rule_desc:This rule checks for open Remote Management Ports
+rule_confirm:Remote Server Exposes Administration Port(s)
+rule_details:Server is listening on remote port: 23 (Telnet)
+rule_mitigation:Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely.
+
+ip:192.168.116.134
+port:21
+domain:None
+rule_id:SVC_C74A
+rule_sev:3
+rule_desc:This rule checks for open FTP Ports
+rule_confirm:Remote Server Exposes FTP Port(s)
+rule_details:Server is listening on remote port:21 (FTP)
+rule_mitigation:Ensure at the bare minimum FTP is over SSL, and only allow trusted clients to connect to it over the network.
+
+ip:192.168.116.134
+port:80
+domain:None
+rule_id:CFG_BS3R
+rule_sev:2
+rule_desc:This rule checks for misconfigurations in PHP
+rule_confirm:PHP Information Leakage
+rule_details:PHP Misconfiguration - Default PHP environment page at http://192.168.116.134:80/phpinfo.php
+rule_mitigation:The Remote Server's PHP is leaking out environment information, which may under certain situations reveal sensitive data such as environment variables, modules installed, etc.
+Disable PHP info by either adding
+`disable_functions = phpinfo`
+in php.ini file 
+OR
+`php_value disable_functions phpinfo`
+in .htaccess file.
+
+
+ip:192.168.116.134
+port:2049
+domain:None
+rule_id:SVC_0C1Z
+rule_sev:2
+rule_desc:This rule checks for open Rare Ports
+rule_confirm:Remote Server Exposes Rare Port(s)
+rule_details:Server is listening on remote port: 2049 (nfs)
+rule_mitigation:Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.
+
+ip:192.168.116.134
+port:139
+domain:None
+rule_id:SVC_6509
+rule_sev:3
+rule_desc:This rule checks for open Remote Management Ports
+rule_confirm:Remote Server Exposes Administration Port(s)
+rule_details:Server is listening on remote port: 139 (NetBIOS)
+rule_mitigation:Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely.
+
+ip:192.168.116.134
+port:513
+domain:None
+rule_id:SVC_0C1Z
+rule_sev:2
+rule_desc:This rule checks for open Rare Ports
+rule_confirm:Remote Server Exposes Rare Port(s)
+rule_details:Server is listening on remote port: 513 (login)
+rule_mitigation:Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.
+
+ip:192.168.116.134
+port:22
+domain:None
+rule_id:CFG_FOQW
+rule_sev:3
+rule_desc:This rule checks if OpenSSH allows passwords as an accepted authentication mechanism
+rule_confirm:Remote Server Supports SSH Passwords
+rule_details:Server accepts passwords as an authentication option
+rule_mitigation:OpenSSH allows password authentication, this is considered bad security practice. 
+SSH Key based authentication should be enabled on the server, and passwords should be disabled.
+
+ip:192.168.116.134
+port:514
+domain:None
+rule_id:SVC_0C1Z
+rule_sev:2
+rule_desc:This rule checks for open Rare Ports
+rule_confirm:Remote Server Exposes Rare Port(s)
+rule_details:Server is listening on remote port: 514 (shell)
+rule_mitigation:Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.
+
+ip:192.168.116.134
+port:80
+domain:None
+rule_id:DSC_A4F1
+rule_sev:1
+rule_desc:This rule checks for the exposure of Web Panels
+rule_confirm:Identified a Known Web Panel
+rule_details:Login Page Exposed at http://192.168.116.134:80/
+rule_mitigation:Identify whether the application in question is supposed to be exposed to the network.
+
+ip:192.168.116.134
+port:80
+domain:None
+rule_id:VLN_Z013
+rule_sev:4
+rule_desc:This rule checks for Open Directories via Directory Indexing
+rule_confirm:Remote Server has Directory Indexing Enabled
+rule_details:Identified an Open Directory at http://192.168.116.134/test/
+rule_mitigation:Disable Directory Indexing on the server. Directory Indexing can allow access to files on the server to untrusted sources.
+
+ip:192.168.116.134
+port:80
+domain:None
+rule_id:CFG_BZLS
+rule_sev:0
+rule_desc:This rule checks if the Server's Response Headers Reveals Platform Version
+rule_confirm:Identified Powered By Headers
+rule_details:Server is set with "X-Powered-By" Headers
+rule_mitigation:Disable Version Advertisement in the Web Server Configuration.
+in IIS: https://stackoverflow.com/questions/3374831/in-iis-can-i-safely-remove-the-x-powered-by-asp-net-header
+in ASP.NET: https://doc.sitecore.com/developers/90/platform-administration-and-architecture/en/remove-header-information-from-responses-sent-by-your-website.html
+
+ip:192.168.116.134
+port:111
+domain:None
+rule_id:SVC_F88A
+rule_sev:3
+rule_desc:This rule checks for open Service Ports
+rule_confirm:Exposed Service Port
+rule_details:Server is listening on remote port: 111 (NFS)
+rule_mitigation:Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.
+
+ip:192.168.116.134
+port:6000
+domain:None
+rule_id:SVC_0391
+rule_sev:1
+rule_desc:This rule checks for VNC services on obfuscated ports
+rule_confirm:Remote Server Obfuscates VNC ports
+rule_details:Server is hiding VNC behind remote port: 6000
+rule_mitigation:VNC Running on non-standard ports is easy for attackers to find.
+While it doesn't do harm changing the standard port from (default) 5900-5904, check whether VNC can be disabled, or allow acces only from trusted IP addresses.
+
+
+ip:192.168.116.134
+port:8009
+domain:None
+rule_id:SVC_0C1Z
+rule_sev:2
+rule_desc:This rule checks for open Rare Ports
+rule_confirm:Remote Server Exposes Rare Port(s)
+rule_details:Server is listening on remote port: 8009 (Unknown)
+rule_mitigation:Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.
+
+ip:192.168.116.134
+port:5432
+domain:None
+rule_id:SVC_0C15
+rule_sev:3
+rule_desc:This rule checks for open Database Ports
+rule_confirm:Remote Server Exposes Database Port(s)
+rule_details:Server is listening on remote port: 5432 (PostgreSQL)
+rule_mitigation:Bind all possible database interfaces to localhost. 
+If the database requires remote connections, allow only trusted source ip addresses.
+
+ip:192.168.116.134
+port:3306
+domain:None
+rule_id:SVC_0C15
+rule_sev:3
+rule_desc:This rule checks for open Database Ports
+rule_confirm:Remote Server Exposes Database Port(s)
+rule_details:Server is listening on remote port: 3306 (MySQL)
+rule_mitigation:Bind all possible database interfaces to localhost. 
+If the database requires remote connections, allow only trusted source ip addresses.
+
+ip:192.168.116.134
+port:445
+domain:None
+rule_id:SVC_Z115
+rule_sev:3
+rule_desc:This rule checks for open SMB Ports
+rule_confirm:Remote Server Exposes SMB Port(s)
+rule_details:Server is listening on remote port: 445 (SMB)
+rule_mitigation:Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.
+
+ip:192.168.116.134
+port:80
+domain:None
+rule_id:DSC_A4F1
+rule_sev:1
+rule_desc:This rule checks for the exposure of Web Panels
+rule_confirm:Identified a Known Web Panel
+rule_details:MySQL Administration Exposed at http://192.168.116.134:80/
+rule_mitigation:Identify whether the application in question is supposed to be exposed to the network.
+
+ip:192.168.116.134
+port:22
+domain:None
+rule_id:SVC_6509
+rule_sev:3
+rule_desc:This rule checks for open Remote Management Ports
+rule_confirm:Remote Server Exposes Administration Port(s)
+rule_details:Server is listening on remote port: 22 (SSH)
+rule_mitigation:Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely.
+
+ip:192.168.116.134
+port:2121
+domain:None
+rule_id:SVC_0C1Z
+rule_sev:2
+rule_desc:This rule checks for open Rare Ports
+rule_confirm:Remote Server Exposes Rare Port(s)
+rule_details:Server is listening on remote port: 2121 (iprop)
+rule_mitigation:Bind all possible network services to localhost, and configure only those which require remote clients on an external interface.
+
+ip:192.168.116.134
+port:5900
+domain:None
+rule_id:SVC_6509
+rule_sev:3
+rule_desc:This rule checks for open Remote Management Ports
+rule_confirm:Remote Server Exposes Administration Port(s)
+rule_details:Server is listening on remote port: 5900 (VNC)
+rule_mitigation:Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely.
+

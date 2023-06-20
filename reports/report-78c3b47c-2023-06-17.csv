@@ -1,0 +1,39 @@
+#,ip,port,rule_id,rule_severity,rule_description,rule_rule_confirm,rule_mitigation
+1,192.168.116.134,21,VLN_242C,Critical,This rule checks if FTP Server allows Anonymous Access,FTP Anonymous Access Allowed,FTP allows anonymous users access. Disable Anonymous FTP access if this is not a business requirement.
+2,192.168.116.134,6000,SVC_0C1Z,Medium,This rule checks for open Rare Ports,Remote Server Exposes Rare Port(s),"Bind all possible network services to localhost, and configure only those which require remote clients on an external interface."
+3,192.168.116.134,80,SVC_ZGZA,Low,This rule checks for open HTTP Ports,Remote Server Exposes HTTP Port(s),"Bind all possible network services to localhost, and configure only those which require remote clients on an external interface."
+4,192.168.116.134,23,SVC_6509,High,This rule checks for open Remote Management Ports,Remote Server Exposes Administration Port(s),"Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely."
+5,192.168.116.134,21,SVC_C74A,High,This rule checks for open FTP Ports,Remote Server Exposes FTP Port(s),"Ensure at the bare minimum FTP is over SSL, and only allow trusted clients to connect to it over the network."
+6,192.168.116.134,80,CFG_BS3R,Medium,This rule checks for misconfigurations in PHP,PHP Information Leakage,"The Remote Server's PHP is leaking out environment information, which may under certain situations reveal sensitive data such as environment variables, modules installed, etc.
+Disable PHP info by either adding
+`disable_functions = phpinfo`
+in php.ini file 
+OR
+`php_value disable_functions phpinfo`
+in .htaccess file.
+"
+7,192.168.116.134,2049,SVC_0C1Z,Medium,This rule checks for open Rare Ports,Remote Server Exposes Rare Port(s),"Bind all possible network services to localhost, and configure only those which require remote clients on an external interface."
+8,192.168.116.134,139,SVC_6509,High,This rule checks for open Remote Management Ports,Remote Server Exposes Administration Port(s),"Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely."
+9,192.168.116.134,513,SVC_0C1Z,Medium,This rule checks for open Rare Ports,Remote Server Exposes Rare Port(s),"Bind all possible network services to localhost, and configure only those which require remote clients on an external interface."
+10,192.168.116.134,22,CFG_FOQW,High,This rule checks if OpenSSH allows passwords as an accepted authentication mechanism,Remote Server Supports SSH Passwords,"OpenSSH allows password authentication, this is considered bad security practice. 
+SSH Key based authentication should be enabled on the server, and passwords should be disabled."
+11,192.168.116.134,514,SVC_0C1Z,Medium,This rule checks for open Rare Ports,Remote Server Exposes Rare Port(s),"Bind all possible network services to localhost, and configure only those which require remote clients on an external interface."
+12,192.168.116.134,80,DSC_A4F1,Low,This rule checks for the exposure of Web Panels,Identified a Known Web Panel,Identify whether the application in question is supposed to be exposed to the network.
+13,192.168.116.134,80,VLN_Z013,Critical,This rule checks for Open Directories via Directory Indexing,Remote Server has Directory Indexing Enabled,Disable Directory Indexing on the server. Directory Indexing can allow access to files on the server to untrusted sources.
+14,192.168.116.134,80,CFG_BZLS,Informational,This rule checks if the Server's Response Headers Reveals Platform Version,Identified Powered By Headers,"Disable Version Advertisement in the Web Server Configuration.
+in IIS: https://stackoverflow.com/questions/3374831/in-iis-can-i-safely-remove-the-x-powered-by-asp-net-header
+in ASP.NET: https://doc.sitecore.com/developers/90/platform-administration-and-architecture/en/remove-header-information-from-responses-sent-by-your-website.html"
+15,192.168.116.134,111,SVC_F88A,High,This rule checks for open Service Ports,Exposed Service Port,"Bind all possible network services to localhost, and configure only those which require remote clients on an external interface."
+16,192.168.116.134,6000,SVC_0391,Low,This rule checks for VNC services on obfuscated ports,Remote Server Obfuscates VNC ports,"VNC Running on non-standard ports is easy for attackers to find.
+While it doesn't do harm changing the standard port from (default) 5900-5904, check whether VNC can be disabled, or allow acces only from trusted IP addresses.
+"
+17,192.168.116.134,8009,SVC_0C1Z,Medium,This rule checks for open Rare Ports,Remote Server Exposes Rare Port(s),"Bind all possible network services to localhost, and configure only those which require remote clients on an external interface."
+18,192.168.116.134,5432,SVC_0C15,High,This rule checks for open Database Ports,Remote Server Exposes Database Port(s),"Bind all possible database interfaces to localhost. 
+If the database requires remote connections, allow only trusted source ip addresses."
+19,192.168.116.134,3306,SVC_0C15,High,This rule checks for open Database Ports,Remote Server Exposes Database Port(s),"Bind all possible database interfaces to localhost. 
+If the database requires remote connections, allow only trusted source ip addresses."
+20,192.168.116.134,445,SVC_Z115,High,This rule checks for open SMB Ports,Remote Server Exposes SMB Port(s),"Bind all possible network services to localhost, and configure only those which require remote clients on an external interface."
+21,192.168.116.134,80,DSC_A4F1,Low,This rule checks for the exposure of Web Panels,Identified a Known Web Panel,Identify whether the application in question is supposed to be exposed to the network.
+22,192.168.116.134,22,SVC_6509,High,This rule checks for open Remote Management Ports,Remote Server Exposes Administration Port(s),"Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely."
+23,192.168.116.134,2121,SVC_0C1Z,Medium,This rule checks for open Rare Ports,Remote Server Exposes Rare Port(s),"Bind all possible network services to localhost, and configure only those which require remote clients on an external interface."
+24,192.168.116.134,5900,SVC_6509,High,This rule checks for open Remote Management Ports,Remote Server Exposes Administration Port(s),"Bind all possible services to localhost, and confirm only those which require remote clients are allowed remotely."
